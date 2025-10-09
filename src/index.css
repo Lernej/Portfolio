@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-motion";
+
+.glow-effect {
+  @apply drop-shadow-[0_35px_35px_rgba(255,255,255,0.35)];
+}
