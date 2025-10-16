@@ -5,3 +5,12 @@
 .glow-effect {
   @apply drop-shadow-[0_35px_35px_rgba(255,255,255,0.35)];
 }
+
+html,
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  overscroll-behavior: none;
+}

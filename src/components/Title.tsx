@@ -19,8 +19,8 @@ const Title = () => {
           : "opacity-0"
       }`}
     >
-      <h1 className="text-white font-bold text-5xl lg:text-6xl">Noah Lerner</h1>
-      <h1 className="text-white font-bold text-3xl lg:text-4xl">
+      <h1 className="text-white font-bold text-3xl lg:text-6xl">Noah Lerner</h1>
+      <h1 className="text-white font-bold text-2xl lg:text-4xl">
         CS Major at the University of Central Florida Burnett Honors College
       </h1>
     </div>
