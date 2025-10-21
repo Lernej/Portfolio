@@ -2,13 +2,23 @@ import Headshot from "./components/Headshot";
 import Title from "./components/Title";
 import Clouds from "./components/Clouds";
 import Waves from "./components/Waves";
-
-import ResponsiveDiv from "./components/ResponsiveDiv";
+import sun from "./assets/sun.svg";
 import Button from "./components/Button";
-import Mt from "./assets/mountain.svg?react";
-import PopInDiv from "./components/PopInDiv";
+
+import SpaceCarousel from "./components/SpaceCarousel";
+import { useState } from "react";
+import { StarsBackground } from "./components/animate-ui/components/backgrounds/stars";
 
 function Home() {
+  const [focusElement, setFocusElement] = useState(0);
+
+  const focusElements = [
+    <Button href="/about">About Me</Button>,
+    <Button>Experience</Button>,
+    <Button>Projects</Button>,
+    <Button>Skills</Button>,
+  ];
+
   return (
     <>
       <div className="relative flex min-h-screen items-center justify-center">
@@ -27,39 +37,29 @@ function Home() {
         </div>
       </div>
 
-      <div className="min-h-screen bg-gray-600 relative">
-        <div className="absolute inset-0 z-50">
+      <div className="min-h-screen min-w-screen relative flex flex-col items-center justify-center gap-30">
+        <div className="absolute inset-0 z-20">
           <Waves></Waves>
         </div>
 
-        <PopInDiv className="h-0 absolute flex w-full items-center justify-center text-center z-50 top-[40%]">
-          <div className="text-white font-bold text-3xl motion-preset-pulse-sm motion-duration-5000">
-            Select a button to navigate
-          </div>
-        </PopInDiv>
-
-        <div className="absolute bottom-0 left-[3%] lg:left-[20%]">
-          <div className="relative w-[90vw] lg:w-[60vw]">
-            <PopInDiv className="">
-              <Mt className="w-[90vw] lg:w-[60vw]"></Mt>
-            </PopInDiv>
-
-            <a href="/about">
-              <Button className="bottom-[20%] left-[5%]">About Me</Button>
-            </a>
-
-            <Button className="bottom-[50%] left-[15%]">Projects</Button>
-            <Button className="top-0 left-[50%] lg:left-[54%]">
-              Experience
-            </Button>
-            <Button className="top-[35%] left-[75%] lg:left-[80%]">
-              Skills
-            </Button>
-          </div>
+        <div className="absolute top-0 bottom-0 left-0 right-0">
+          <StarsBackground />
         </div>
 
-        <div className="z-0">
-          <ResponsiveDiv />
+        <div className="instructions h-20 mt-50  lg:mt-90 flex flex-col justify-center items-center gap-3 z-50">
+          <p className="text-white font-bold text-2xl">
+            🚀 Selected page for navigation 🚀
+          </p>
+          <div>{focusElements[focusElement]}</div>
+        </div>
+
+        <div className="ml-13 inline-block relative z-40 mb-50">
+          <SpaceCarousel setFocusElement={setFocusElement}></SpaceCarousel>
+          <img
+            src={sun}
+            draggable={false}
+            className="absolute h-50 top-[43%] left-[43%] -translate-x-1/2 -translate-y-1/2"
+          />
         </div>
       </div>
     </>
