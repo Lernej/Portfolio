@@ -37,7 +37,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="min-h-screen min-w-screen relative flex flex-col items-center justify-center gap-30">
+      <div className="h-full w-full relative flex flex-col items-center justify-center gap-25">
         <div className="absolute inset-0 z-20">
           <Waves></Waves>
         </div>
@@ -53,12 +53,12 @@ function Home() {
           <div>{focusElements[focusElement]}</div>
         </div>
 
-        <div className="ml-13 inline-block relative z-40 mb-50">
+        <div className="ml-17 inline-block relative z-40 mb-30">
           <SpaceCarousel setFocusElement={setFocusElement}></SpaceCarousel>
           <img
             src={sun}
             draggable={false}
-            className="absolute h-50 top-[43%] left-[43%] -translate-x-1/2 -translate-y-1/2"
+            className="absolute h-35 top-[41%] left-[41%] -translate-x-1/2 -translate-y-1/2"
           />
         </div>
       </div>

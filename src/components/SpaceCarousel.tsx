@@ -31,11 +31,12 @@ const SpaceCarousel = ({ setFocusElement }: Props) => {
     <div ref={carouselRef} className="carousel no-drag">
       <FancyCarousel
         images={images}
-        carouselRadius={200}
+        carouselRadius={150}
         centralImageRadius={0}
         setFocusElement={setFocusElement}
         borderHexColor={"FFFFFF"}
         navigationButtonBgColor="030712"
+        peripheralImageRadius={50}
       />
     </div>
   );
