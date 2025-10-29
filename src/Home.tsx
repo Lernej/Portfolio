@@ -14,7 +14,7 @@ function Home() {
 
   const focusElements = [
     <Button href="/about">About Me</Button>,
-    <Button>Experience</Button>,
+    <Button href="/experience">Experience</Button>,
     <Button>Projects</Button>,
     <Button>Skills</Button>,
   ];

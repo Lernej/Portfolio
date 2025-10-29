@@ -1,58 +1,64 @@
-import grad from "../assets/graduation.png";
-import senior from "../assets/senior.jpeg";
-import engineering from "../assets/engineering.jpeg";
 import { useState, useEffect } from "react";
 
-const ImageSlider = () => {
-  const images = [grad, senior, engineering];
+interface Props {
+  imageList: string[];
+  captionList?: string[];
+}
+
+const ImageSlider = ({ imageList, captionList }: Props) => {
+  const images = imageList;
+  const captions = captionList;
   const [image, setImage] = useState(0);
-
-  useEffect(() => {
-    images.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, []);
-
-  const currentImage = images[image];
+  const [caption, setCaption] = useState(0);
 
   const handleRightArrow = () => {
     if (image != 2) {
       setImage((prev) => prev + 1);
+      setCaption((prev) => prev + 1);
     } else {
       setImage(0);
+      setCaption(0);
     }
   };
 
   const handleLeftArrow = () => {
     if (image != 0) {
       setImage((prev) => prev - 1);
+      setCaption((prev) => prev - 1);
     } else {
       setImage(2);
+      setCaption(0);
     }
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div
-        className="bg-cover bg-center h-100 w-100 relative rounded-xl"
-        style={{ backgroundImage: `url(${currentImage})` }}
-        key={currentImage}
-      >
+    <div className="flex flex-col items-center justify-center gap-2">
+      <div className="bg-cover bg-center h-130 w-100 relative rounded-xl overflow-hidden">
         <div
           onClick={handleRightArrow}
-          className="absolute text-white font-bold right-0 bg-black h-full flex flex-col justify-center cursor-pointer opacity-50"
+          className="absolute text-white font-bold right-0 h-full flex flex-col justify-center cursor-pointer z-10 hover:bg-black/20 transition-colors duration-200"
         >
-          {">"}
-        </div>
-        <div
-          onClick={handleLeftArrow}
-          className="absolute text-white font-bold left-0 bg-black h-full flex flex-col justify-center cursor-pointer opacity-50"
-        >
-          {"<"}
+          {"⇨"}
         </div>
 
-        <div className="flex items-center justify-center gap-1 absolute bottom-1 left-[50%] -translate-x-[50%] bg-black/50 w-8 h-2 rounded-xl">
+        <div
+          onClick={handleLeftArrow}
+          className="absolute text-white font-bold left-0  h-full flex flex-col justify-center cursor-pointer z-10 hover:bg-black/20 transition-colors duration-200"
+        >
+          {"⇦"}
+        </div>
+        <div className="h-full w-full flex overflow-hidden">
+          {images.map((url) => (
+            <img
+              src={url}
+              key={url}
+              style={{ translate: `${-100 * image}%` }}
+              className="shrink-0 grow-0 w-full h-full transition-transform duration-500"
+            ></img>
+          ))}
+        </div>
+
+        <div className="flex items-center justify-center gap-1 absolute bottom-1 left-[50%] -translate-x-[50%] bg-black/100 w-8 h-2 rounded-xl">
           <div
             className={`h-1 w-1 bg-white/50 rounded-4xl ${
               image == 0 && "bg-white/100"
@@ -69,6 +75,9 @@ const ImageSlider = () => {
             }`}
           ></div>
         </div>
+      </div>
+      <div className="text-center h-10">
+        {captions ? captions[caption] : ""}
       </div>
     </div>
   );

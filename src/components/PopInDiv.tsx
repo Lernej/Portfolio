@@ -4,9 +4,11 @@ import { motion, useInView, useAnimation } from "framer-motion";
 interface Props {
   children?: React.ReactNode;
   className?: string;
+  duration: number;
+  direction: string;
 }
 
-const PopInDiv = ({ children, className }: Props) => {
+const PopInDiv = ({ children, className, duration, direction }: Props) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const ref = useRef(null);
@@ -20,7 +22,7 @@ const PopInDiv = ({ children, className }: Props) => {
       const timer = setTimeout(() => {
         mainControls.start("visible");
         setIsVisible(true);
-      }, 500);
+      }, duration);
 
       return () => clearTimeout(timer);
     }
@@ -30,7 +32,9 @@ const PopInDiv = ({ children, className }: Props) => {
     <div ref={ref}>
       <motion.div
         className={`${className} ${
-          isVisible ? "motion-preset-slide-right motion-duration-2000" : ""
+          isVisible
+            ? `motion-preset-slide-${direction} motion-duration-2000`
+            : ""
         }`}
         variants={{
           hidden: { opacity: 0 },
