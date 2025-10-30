@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 interface Props {
   imageList: string[];
   captionList?: string[];
+  width?: string;
 }
 
 const ImageSlider = ({ imageList, captionList }: Props) => {
@@ -12,7 +13,7 @@ const ImageSlider = ({ imageList, captionList }: Props) => {
   const [caption, setCaption] = useState(0);
 
   const handleRightArrow = () => {
-    if (image != 2) {
+    if (image != images.length - 1) {
       setImage((prev) => prev + 1);
       setCaption((prev) => prev + 1);
     } else {
@@ -26,14 +27,16 @@ const ImageSlider = ({ imageList, captionList }: Props) => {
       setImage((prev) => prev - 1);
       setCaption((prev) => prev - 1);
     } else {
-      setImage(2);
-      setCaption(0);
+      setImage(images.length - 1);
+      setCaption(images.length - 1);
     }
   };
 
   return (
     <div className="flex flex-col items-center justify-center gap-2">
-      <div className="bg-cover bg-center h-130 w-100 relative rounded-xl overflow-hidden">
+      <div
+        className={`bg-cover bg-center h-130 w-90 relative rounded-xl overflow-hidden`}
+      >
         <div
           onClick={handleRightArrow}
           className="absolute text-white font-bold right-0 h-full flex flex-col justify-center cursor-pointer z-10 hover:bg-black/20 transition-colors duration-200"
@@ -47,33 +50,26 @@ const ImageSlider = ({ imageList, captionList }: Props) => {
         >
           {"⇦"}
         </div>
-        <div className="h-full w-full flex overflow-hidden">
+        <div className="h-full w-full shrink-0 grow-0 flex overflow-hidden">
           {images.map((url) => (
             <img
               src={url}
               key={url}
               style={{ translate: `${-100 * image}%` }}
-              className="shrink-0 grow-0 w-full h-full transition-transform duration-500"
+              className="shrink-0 grow-0 w-auto h-auto transition-transform duration-500"
             ></img>
           ))}
         </div>
 
         <div className="flex items-center justify-center gap-1 absolute bottom-1 left-[50%] -translate-x-[50%] bg-black/100 w-8 h-2 rounded-xl">
-          <div
-            className={`h-1 w-1 bg-white/50 rounded-4xl ${
-              image == 0 && "bg-white/100"
-            }`}
-          ></div>
-          <div
-            className={`h-1 w-1 bg-white/50 rounded-4xl ${
-              image == 1 && "bg-white/100"
-            }`}
-          ></div>
-          <div
-            className={`h-1 w-1 bg-white/50 rounded-4xl ${
-              image == 2 && "bg-white/100"
-            }`}
-          ></div>
+          {images.map((_, buttonIndex) => (
+            <div
+              key={buttonIndex}
+              className={`h-1 w-1 bg-white/50 rounded-4xl ${
+                buttonIndex == image && "bg-white/100"
+              }`}
+            ></div>
+          ))}
         </div>
       </div>
       <div className="text-center h-10">
