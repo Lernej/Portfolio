@@ -61,6 +61,22 @@ function Home() {
             className="absolute h-35 top-[41%] left-[41%] -translate-x-1/2 -translate-y-1/2"
           />
         </div>
+        <div className="h-8 text-white absolute bottom-0 left-0 right-0 opacity-50 bg-gray-800 z-50 flex text-[10px]">
+          <p className="mt-[5px] z-50">
+            Modified from{" "}
+            <a
+              href="https://www.figma.com/community/file/1166831539721848736?ref=svgrepo.com"
+              target="_blank"
+            >
+              Solar Icons
+            </a>{" "}
+            in CC Attribution License via{" "}
+            <a href="https://www.svgrepo.com/" target="_blank">
+              SVG Repo
+            </a>
+            .
+          </p>
+        </div>
       </div>
     </>
   );
