@@ -37,7 +37,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="h-full w-full relative flex flex-col items-center gap-30">
+      <div className="h-full w-full relative flex flex-col items-center gap-20">
         <div className="absolute inset-0 z-20">
           <Waves></Waves>
         </div>
@@ -46,7 +46,7 @@ function Home() {
           <StarsBackground />
         </div>
 
-        <div className="instructions h-0 lg:mt-[25%] flex flex-col justify-center items-center gap-3 z-50">
+        <div className="instructions mt-[20%] flex flex-col justify-center items-center gap-3 z-50">
           <p className="text-white font-bold text-2xl">
             🚀 Selected page for navigation 🚀
           </p>
