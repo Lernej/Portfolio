@@ -1,0 +1,25 @@
+.spin-once {
+  animation: spinOnce 1s linear;
+}
+
+.rocket-fly {
+  animation: rocket-fly 5s linear;
+}
+
+@keyframes spinOnce {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rocket-fly {
+  from {
+    transform: translatey(0px);
+  }
+  to {
+    transform: translatey(-200vh);
+  }
+}

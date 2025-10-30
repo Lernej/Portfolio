@@ -3,6 +3,8 @@ import shellHacks from "./assets/Shellhacks.png";
 import knightHacks from "./assets/knighthacks.jpeg";
 import PopInDiv from "./components/PopInDiv";
 import ufo from "./assets/ufo.svg";
+import "./App.css";
+import { useState } from "react";
 
 const Experience = () => {
   const imageList = [knightHacks, shellHacks];
@@ -11,18 +13,16 @@ const Experience = () => {
     "My Kickstart group at Shellhacks",
   ];
 
+  const [isSpinning, setIsSpinning] = useState(false);
+
+  const handleClick = () => {
+    setIsSpinning(true);
+    setTimeout(() => setIsSpinning(false), 1000);
+  };
+
   return (
     <div className="min-h-screen min-w-screen flex justify-center items-center relative">
-      {" "}
-      <div className="absolute z-20 h-20 w-20 right-15 top-[35%] lg:left-150">
-        <PopInDiv duration={200} direction="right">
-          <img
-            src={ufo}
-            className="w-full h-full motion-preset-oscillate motion-duration-4000"
-          ></img>
-        </PopInDiv>
-      </div>
-      <div className="text-image bg-gray-950 text-white flex flex-col gap-20 lg:gap-0 lg:flex-row">
+      <div className="mt-20 bg-gray-950 text-white flex flex-col gap-20 lg:gap-0 lg:flex-row">
         <div className="flex-2">
           <PopInDiv duration={200} direction="right">
             <p className="text-7xl font-bold mb-5 text-center lg:text-5xl">
@@ -41,12 +41,23 @@ const Experience = () => {
                   <div className="font-bold text-4xl lg:text-3xl">
                     Relevant Coursework
                   </div>
-                  <ul className="list-disc list-inside text-xl lg:text-sm">
+                  <ul className="list-disc list-inside text-xl relativelg:text-sm">
                     <li>AP Computer Science Principles</li>
                     <li>AP Computer Science A</li>
                     <li>Calculus 1</li>
                     <li>Calculus 2</li>
                     <li>Intro to programming with C</li>
+                    <div className="opacity-0 md:opacity-100 absolute z-20 h-20 w-20 right-15 top-[25%] lg:left-150">
+                      <PopInDiv duration={200} direction="right">
+                        <img
+                          src={ufo}
+                          className={` w-full h-full motion-preset-oscillate motion-duration-4000 cursor-pointer ${
+                            isSpinning && "spin-once"
+                          }`}
+                          onClick={handleClick}
+                        ></img>
+                      </PopInDiv>
+                    </div>
                   </ul>
                 </div>
                 <div className="text-left">
