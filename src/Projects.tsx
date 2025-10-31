@@ -3,8 +3,9 @@ import slAIde from "./assets/slAIde.png";
 import studyfinder from "./assets/studyfinder.png";
 import statforge from "./assets/statforge.png";
 import planet from "./assets/orbit.svg";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import "./App.css";
+import PopInDiv from "./components/PopInDiv";
 
 const Projects = () => {
   const [currProject, setCurrProject] = useState(0);
@@ -58,40 +59,59 @@ const Projects = () => {
     />,
   ];
 
+  const stars = useMemo(() => {
+    return Array.from({ length: 300 }, (_, index) => {
+      const left = Math.random() * 100;
+      const top = Math.random() * 100;
+
+      return (
+        <div
+          className="h-px w-px absolute bg-white rounded-full"
+          key={index}
+          style={{ left: `${left}%`, top: `${top}%` }}
+        ></div>
+      );
+    });
+  }, []);
+
   return (
-    <div className="min-h-screen overflow-clip pt-20 text-center flex items-center justify-center text-white">
-      <div className="rounded-full p-16 relative">
+    <div className="min-h-screen relative overflow-clip pt-20 text-center flex items-center justify-center bg-black text-white">
+      <div className="h-full">{stars}</div>
+
+      <div className="rounded-full relative">
         <div className="planet absolute bottom-1/2 left-1/2 z-50 -translate-x-[50%] translate-y-[50%]h-20 w-20 rounded-full">
           <img draggable="false" src={planet}></img>
         </div>
-        <div className="flex flex-col items-center gap-10 text-5xl font-bold">
-          My Projects
-          <div className="flex items-center gap-5">
-            <div
-              onClick={handleLeftArrow}
-              className="bg-gray-500 hover:bg-gray-600 active:bg-gray-700 active:duration-100 transition-colors duration-500 pt-1 pb-3 p-2 flex items-center justify-center rounded-4xl cursor-pointer"
-            >
-              {"⇦"}
-            </div>
-            <div className="flex h-130 w-110 overflow-hidden relative">
-              {projectList.map((project, i) => (
-                <div
-                  key={i}
-                  style={{ translate: `${-100 * currProject}%` }}
-                  className="transition-transform duration-1000"
-                >
-                  {project}
-                </div>
-              ))}
-            </div>
-            <div
-              onClick={handleRightArrow}
-              className="bg-gray-500 hover:bg-gray-600 active:bg-gray-700 active:duration-100 transition-colors duration-500 pt-1 pb-3 p-2 flex items-center justify-center rounded-4xl cursor-pointer"
-            >
-              {"⇨"}
+        <PopInDiv direction="right" duration={500}>
+          <div className="flex flex-col items-center gap-10 text-5xl font-bold">
+            My Projects
+            <div className="flex items-center gap-5">
+              <div
+                onClick={handleLeftArrow}
+                className="bg-gray-500 hover:bg-gray-600 active:bg-gray-700 active:duration-100 transition-colors duration-500 pt-1 pb-3 p-2 flex items-center justify-center rounded-4xl cursor-pointer"
+              >
+                {"⇦"}
+              </div>
+              <div className="flex h-130 w-110 overflow-hidden relative">
+                {projectList.map((project, i) => (
+                  <div
+                    key={i}
+                    style={{ translate: `${-100 * currProject}%` }}
+                    className="transition-transform duration-1000"
+                  >
+                    {project}
+                  </div>
+                ))}
+              </div>
+              <div
+                onClick={handleRightArrow}
+                className="bg-gray-500 hover:bg-gray-600 active:bg-gray-700 active:duration-100 transition-colors duration-500 pt-1 pb-3 p-2 flex items-center justify-center rounded-4xl cursor-pointer"
+              >
+                {"⇨"}
+              </div>
             </div>
           </div>
-        </div>
+        </PopInDiv>
       </div>
     </div>
   );
