@@ -1,22 +1,97 @@
 import Project from "./components/Project";
 import slAIde from "./assets/slAIde.png";
+import studyfinder from "./assets/studyfinder.png";
+import statforge from "./assets/statforge.png";
+import planet from "./assets/orbit.svg";
+import { useState } from "react";
+import "./App.css";
 
 const Projects = () => {
-  return (
-    <div className="min-h-screen pt-20 text-center text-white">
-      <div className="flex flex-col items-center gap-10 text-5xl font-bold">
-        My Projects
-        <Project
-          title="slAIde"
-          image={slAIde}
-          description={`slAIde is a project I developed in a team of three during the
+  const [currProject, setCurrProject] = useState(0);
+
+  const handleRightArrow = () => {
+    if (currProject != projectList.length - 1) {
+      setCurrProject((prev) => prev + 1);
+    } else {
+      setCurrProject(0);
+    }
+  };
+
+  const handleLeftArrow = () => {
+    if (currProject != 0) {
+      setCurrProject((prev) => prev - 1);
+    } else {
+      setCurrProject(projectList.length - 1);
+    }
+  };
+
+  const projectList = [
+    <Project
+      title="slAIde"
+      image={slAIde}
+      description={`slAIde is a project I developed in a team of three during the
         KnightHacks hackathon. This project utilizes Google's ADK, A2A, React,
         Typescript, and Tailwind to produce slideshows/pdf documents based on
         the user's request. I worked on the slideshow generator agents and
         integrated it into the React front end. Click the image to check it
         out on Devpost!`}
-          imageLink="https://devpost.com/software/slaide"
-        />
+      imageLink="https://devpost.com/software/slaide"
+    />,
+    <Project
+      title="StudyFinder"
+      image={studyfinder}
+      description={`StudyFinder was my project for Shellhacks, which I developed independently. 
+        I used React, Typescript, and CSS for the front end, and used Firebase/Firestore 
+        for storing data and handling user authentication. This app allows users to create an account and post "Study Sessions," detailing
+        the time, subject, and location for the session. Users could see any posted sessions for their subjects and choose to join them. Click the image to check it out on Devpost!`}
+      imageLink="https://devpost.com/software/studyfinder-9yn8qp"
+    />,
+    <Project
+      title="StatForge"
+      image={statforge}
+      description={`Statforge was the first project I made that utilized React.
+        This site is meant to assist new Elden Ring players, allowing users to input their 
+        character's stats and see weapons that they can use along with each weapon's scaling. Click the
+        image to check it out on GitHub!
+        `}
+      imageLink="https://github.com/Lernej/StatForge/tree/main"
+    />,
+  ];
+
+  return (
+    <div className="min-h-screen overflow-clip pt-20 text-center flex items-center justify-center text-white">
+      <div className="rounded-full p-16 relative">
+        <div className="planet absolute bottom-1/2 left-1/2 z-50 -translate-x-[50%] translate-y-[50%]h-20 w-20 rounded-full">
+          <img draggable="false" src={planet}></img>
+        </div>
+        <div className="flex flex-col items-center gap-10 text-5xl font-bold">
+          My Projects
+          <div className="flex items-center gap-5">
+            <div
+              onClick={handleLeftArrow}
+              className="bg-gray-500 hover:bg-gray-600 active:bg-gray-700 active:duration-100 transition-colors duration-500 pt-1 pb-3 p-2 flex items-center justify-center rounded-4xl cursor-pointer"
+            >
+              {"⇦"}
+            </div>
+            <div className="flex h-130 w-110 overflow-hidden relative">
+              {projectList.map((project, i) => (
+                <div
+                  key={i}
+                  style={{ translate: `${-100 * currProject}%` }}
+                  className="transition-transform duration-1000"
+                >
+                  {project}
+                </div>
+              ))}
+            </div>
+            <div
+              onClick={handleRightArrow}
+              className="bg-gray-500 hover:bg-gray-600 active:bg-gray-700 active:duration-100 transition-colors duration-500 pt-1 pb-3 p-2 flex items-center justify-center rounded-4xl cursor-pointer"
+            >
+              {"⇨"}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

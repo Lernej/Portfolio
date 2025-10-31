@@ -23,3 +23,17 @@
     transform: translatey(-200vh);
   }
 }
+
+.planet {
+  animation: planet 20s linear infinite;
+  transform-origin: center;
+}
+
+@-webkit-keyframes planet {
+  0% {
+    transform: rotate(0deg) translate(-450px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-450px) rotate(-360deg);
+  }
+}
