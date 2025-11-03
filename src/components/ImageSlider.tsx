@@ -4,9 +4,10 @@ interface Props {
   imageList: string[];
   captionList?: string[];
   width?: string;
+  captionStyle?: string;
 }
 
-const ImageSlider = ({ imageList, captionList }: Props) => {
+const ImageSlider = ({ imageList, captionList, captionStyle }: Props) => {
   const images = imageList;
   const captions = captionList;
   const [image, setImage] = useState(0);
@@ -72,7 +73,7 @@ const ImageSlider = ({ imageList, captionList }: Props) => {
           ))}
         </div>
       </div>
-      <div className="text-center h-10">
+      <div className={`text-center h-10 ${captionStyle ? captionStyle : ""}`}>
         {captions ? captions[caption] : ""}
       </div>
     </div>

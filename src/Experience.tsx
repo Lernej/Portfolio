@@ -5,6 +5,7 @@ import PopInDiv from "./components/PopInDiv";
 import ufo from "./assets/ufo.svg";
 import "./App.css";
 import { useState } from "react";
+import bg from "./assets/experience_background.jpg";
 
 const Experience = () => {
   const imageList = [knightHacks, shellHacks];
@@ -21,9 +22,16 @@ const Experience = () => {
   };
 
   return (
-    <div className="min-h-screen min-w-screen flex justify-center items-center relative">
-      <div className="mt-20 bg-gray-950 text-white flex flex-col gap-20 lg:gap-0 lg:flex-row">
-        <div className="flex-2">
+    <div
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+      className="min-h-screen min-w-screen flex justify-center items-center relative"
+    >
+      <div className="mt-20 text-white flex flex-col gap-20 lg:gap-0 lg:flex-row">
+        <div className="flex-2 bg-gray-900/70 p-10  rounded-xl 2xl ml-10">
           <PopInDiv duration={200} direction="right">
             <p className="text-7xl font-bold mb-5 text-center lg:text-5xl">
               My Experience
@@ -41,11 +49,12 @@ const Experience = () => {
                   <div className="font-bold text-4xl lg:text-3xl">
                     Relevant Coursework
                   </div>
-                  <ul className="list-disc list-inside text-xl relativelg:text-sm">
+                  <ul className="list-disc list-inside text-xl relative lg:text-sm">
                     <li>AP Computer Science Principles</li>
                     <li>AP Computer Science A</li>
                     <li>Calculus 1</li>
                     <li>Calculus 2</li>
+                    <li>Calculus 3</li>
                     <li>Intro to programming with C</li>
                     <div className="opacity-0 md:opacity-100 absolute z-20 h-20 w-20 right-15 top-[25%] lg:left-150">
                       <PopInDiv duration={200} direction="right">

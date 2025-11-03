@@ -5,6 +5,7 @@ import engineering from "./assets/engineering.jpeg";
 import PopInDiv from "./components/PopInDiv";
 import Rocket from "./components/Rocket";
 import moon from "./assets/moon.svg";
+import bg from "./assets/about_background.jpg";
 
 const About = () => {
   const imageList = [engineering, grad, senior];
@@ -15,12 +16,15 @@ const About = () => {
   ];
 
   return (
-    <div className="pt-20 min-h-screen flex items-center justify-center lg:pt-0 relative overflow-clip">
+    <div
+      style={{ backgroundImage: `url(${bg})`, backgroundPosition: "center" }}
+      className="pt-20 min-h-screen flex items-center justify-center lg:pt-0 relative overflow-clip"
+    >
       <Rocket className="left-5 -bottom-20 opacity-0 lg:opacity-100" />
-      <div className="text-image h-full bg-gray-950 text-white flex flex-col items-center  lg:flex-row justify-center">
+      <div className="text-image h-full text-white flex flex-col items-center  lg:flex-row justify-center">
         <div className="pl-10 pr-10 lg:pl-30 lg:pr-30">
           <PopInDiv duration={200} direction="right">
-            <div className="h-full flex flex-col text-center items-center justify-center gap-10 flex-1 relative">
+            <div className="h-full bg-gray-900/90 p-10 rounded-xl flex flex-col text-center items-center justify-center gap-10 flex-1 relative">
               <div className="size-25 absolute right-0 -top-10 motion-preset-wobble motion-duration-5000">
                 <img
                   className="size-full opacity-0 lg:opacity-100"
