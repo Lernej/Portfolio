@@ -45,12 +45,12 @@ const About = () => {
                   Why did I choose to study Computer Science?
                 </p>
                 <p className="text-left text-xl">
-                  Sparked by my love of video games, I’ve always been fascinated
-                  by how software works. In high school, taking AP Computer
-                  Science Principles and AP Computer Science A gave me the
-                  chance to explore this interest. The excitement I felt while
-                  working on projects in those classes confirmed that I wanted
-                  to study CS in college.
+                  Inspired by my love of video games, I’ve always been
+                  fascinated by how software works. In high school, taking AP
+                  Computer Science Principles and AP Computer Science A gave me
+                  the chance to explore this interest. The excitement I felt
+                  while working on projects in those classes confirmed that I
+                  wanted to study CS in college.
                 </p>
               </div>
               <div>

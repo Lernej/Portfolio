@@ -16,7 +16,7 @@ function Home() {
     <Button href="/about">About Me</Button>,
     <Button href="/experience">Experience</Button>,
     <Button href="/projects">Projects</Button>,
-    <Button>Skills</Button>,
+    <Button href="/skills">Skills</Button>,
   ];
 
   return (

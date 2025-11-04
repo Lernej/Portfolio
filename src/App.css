@@ -37,3 +37,26 @@
     transform: rotate(360deg) translate(-450px) rotate(-360deg);
   }
 }
+
+@keyframes ufo {
+  0% {
+    transform: translatex(0px);
+  }
+  50% {
+    transform: translatex(90vw);
+  }
+  100% {
+    transform: translatex(0px);
+  }
+}
+
+.ufo {
+  animation: ufo 30s linear infinite;
+  transform-origin: center;
+  animation-play-state: running;
+  pointer-events: none;
+}
+
+.paused {
+  animation-play-state: paused;
+}
