@@ -1,4 +1,3 @@
-import bg from "./assets/skills-background.jpg";
 import Skill from "./components/Skill";
 import { useState, useMemo } from "react";
 

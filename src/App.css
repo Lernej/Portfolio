@@ -43,7 +43,7 @@
     transform: translatex(0px);
   }
   50% {
-    transform: translatex(90vw);
+    transform: translateX(calc(100vw - 200px));
   }
   100% {
     transform: translatex(0px);
@@ -52,7 +52,7 @@
 
 .ufo {
   animation: ufo 30s linear infinite;
-  transform-origin: center;
+  transform-origin: left;
   animation-play-state: running;
   pointer-events: none;
 }
