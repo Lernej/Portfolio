@@ -6,8 +6,6 @@ import ufo from "./assets/ufo.svg";
 import "./App.css";
 import { useState } from "react";
 import bg from "./assets/experience_background.jpg";
-import PillNav from "./components/PillNav";
-import logo from "./assets/logo.jpg";
 
 const Experience = () => {
   const imageList = [knightHacks, shellHacks];
@@ -32,10 +30,10 @@ const Experience = () => {
       }}
       className="min-h-screen min-w-screen flex justify-center items-center relative"
     >
-      <div className="mt-20 text-white flex flex-col gap-20 lg:gap-0 lg:flex-row">
-        <div className="flex-2 bg-gray-900/70 p-10 rounded-xl 2xl mx-10">
+      <div className=" text-white flex flex-col gap-20 lg:gap-0 lg:flex-row">
+        <div className="flex-2 bg-gray-900/70 p-5 rounded-xl 2xl mx-10">
           <PopInDiv duration={200} direction="right">
-            <p className="text-7xl font-bold mb-5 text-center lg:text-5xl">
+            <p className="text-5xl font-bold mb-2 text-center lg:text-5xl">
               My Experience
             </p>
             <div className="h-full flex flex-col text-center pl-10 pr-10 gap-10 flex-1">

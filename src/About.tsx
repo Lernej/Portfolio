@@ -18,7 +18,7 @@ const About = () => {
   return (
     <div
       style={{ backgroundImage: `url(${bg})`, backgroundPosition: "center" }}
-      className="pt-20 min-h-screen flex items-center justify-center lg:pt-0 relative overflow-clip"
+      className="min-h-screen flex items-center justify-center lg:pt-0 relative overflow-clip"
     >
       <Rocket className="left-5 -bottom-20 opacity-0 lg:opacity-100" />
       <div className="text-image h-full text-white flex flex-col items-center  lg:flex-row justify-center">
@@ -32,8 +32,8 @@ const About = () => {
                 ></img>
               </div>
               <div>
-                <p className="text-7xl  font-bold">Hi, I'm Noah!</p>
-                <p className="text-left text-xl">
+                <p className="text-5xl  font-bold">Hi, I'm Noah!</p>
+                <p className="text-left text-md">
                   I'm a first year computer science student at the University of
                   Central Florida Burnett Honors College. I'm interested in
                   pursuing a career in Software Engineering, Artificial
@@ -44,7 +44,7 @@ const About = () => {
                 <p className="text-3xl  font-bold">
                   Why did I choose to study Computer Science?
                 </p>
-                <p className="text-left text-xl">
+                <p className="text-left text-md">
                   Inspired by my love of video games, I’ve always been
                   fascinated by how software works. In high school, taking AP
                   Computer Science Principles and AP Computer Science A gave me
@@ -57,7 +57,7 @@ const About = () => {
                 <p className="text-3xl font-bold">
                   Some of my other interests!
                 </p>
-                <p className="text-left text-xl">
+                <p className="text-left text-md">
                   Outside of computer science, I love playing Magic: The
                   Gathering, distance running, working out, and playing video
                   games!
