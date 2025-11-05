@@ -31,7 +31,7 @@ const Experience = () => {
       className="min-h-screen min-w-screen flex justify-center items-center relative"
     >
       <div className="mt-20 text-white flex flex-col gap-20 lg:gap-0 lg:flex-row">
-        <div className="flex-2 bg-gray-900/70 p-10  rounded-xl 2xl ml-10">
+        <div className="flex-2 bg-gray-900/70 p-10 rounded-xl 2xl mx-10">
           <PopInDiv duration={200} direction="right">
             <p className="text-7xl font-bold mb-5 text-center lg:text-5xl">
               My Experience

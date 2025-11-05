@@ -19,11 +19,10 @@ const Skill = ({ className, isPaused, skill, description, height }: Props) => {
     <div
       className={`left-0 ufo h-30 ${
         isPaused ? "paused" : ""
-      } flex flex-col items-center absolute z-50${className}`}
+      } flex flex-col items-center absolute hover:-translate-y-1 transition-transform duration-300 z-20 ${className}`}
       style={{
         bottom: `${height}%`,
         animationDelay: `${randomDelay.current}s`,
-        animationDuration: `${Math.max(window.innerWidth / 100, 30)}s`,
       }}
     >
       <img src={ufo} className="h-full"></img>
@@ -31,7 +30,7 @@ const Skill = ({ className, isPaused, skill, description, height }: Props) => {
         onClick={() => {
           setShowDescription((prev) => !prev);
         }}
-        className="z-50 pointer-events-auto bg-gray-800 cursor-pointer px-3 py-1 rounded-3xl -mt-5 text-md shadow-2xl border-1 border-gray-950"
+        className="z-50 pointer-events-auto bg-gray-800 hover:bg-gray-900 transition-colors duration-200 cursor-pointer px-3 py-1 rounded-3xl -mt-5 text-md shadow-2xl border-1 border-gray-950"
       >
         {skill}
       </div>

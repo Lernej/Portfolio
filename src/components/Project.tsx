@@ -3,7 +3,6 @@ interface Props {
   description: string;
   image: string;
   imageLink: string;
-  startingHeight: string;
 }
 
 const Project = ({ title, description, image, imageLink }: Props) => {
