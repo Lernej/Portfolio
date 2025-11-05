@@ -6,6 +6,8 @@ import ufo from "./assets/ufo.svg";
 import "./App.css";
 import { useState } from "react";
 import bg from "./assets/experience_background.jpg";
+import PillNav from "./components/PillNav";
+import logo from "./assets/logo.jpg";
 
 const Experience = () => {
   const imageList = [knightHacks, shellHacks];
@@ -55,7 +57,7 @@ const Experience = () => {
                     <li>Calculus 1</li>
                     <li>Calculus 2</li>
                     <li>Calculus 3</li>
-                    <li>Intro to programming with C</li>
+                    <li>Intro to Programming with C</li>
                     <div className="opacity-0 md:opacity-100 absolute z-20 h-20 w-20 right-15 top-[25%] lg:left-150">
                       <PopInDiv duration={200} direction="right">
                         <img

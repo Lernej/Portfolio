@@ -70,7 +70,11 @@ const About = () => {
         <PopInDiv duration={200} direction="left">
           {" "}
           <div className="flex-2 p-10">
-            <ImageSlider imageList={imageList} captionList={captionList} />
+            <ImageSlider
+              imageList={imageList}
+              captionList={captionList}
+              captionStyle="bg-gray-900/80 flex items-center justify-center p-2 h-15 rounded-2xl"
+            />
           </div>
         </PopInDiv>
       </div>

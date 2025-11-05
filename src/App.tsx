@@ -5,17 +5,61 @@ import About from "./About";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import PillNav from "./components/PillNav";
+import logo from "./assets/logo.png";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function App() {
+  function NavbarDisplay() {
+    const location = useLocation();
+    const [visibleNav, setVisibleNav] = useState(false);
+
+    useEffect(() => {
+      setVisibleNav(false);
+
+      if (location.pathname != "/") {
+        const timeout = setTimeout(() => {
+          setVisibleNav(true);
+        }, 50);
+
+        return () => clearTimeout(timeout);
+      }
+    }, [location]);
+
+    return (
+      <div
+        className={`min-w-screen flex items-center justify-center opacity-0 transition-opacity duration-100 ${
+          visibleNav && "opacity-100"
+        }`}
+      >
+        <PillNav
+          logo={logo}
+          logoAlt="Company Logo"
+          items={[
+            { label: "Home", href: "/" },
+            { label: "About", href: "/about" },
+            { label: "Experience", href: "/experience" },
+            { label: "Projects", href: "/projects" },
+            { label: "Skills", href: "/skills" },
+          ]}
+          activeHref="/"
+          className="custom-nav"
+          ease="power2.easeOut"
+          baseColor="#9c9b9a"
+          pillColor="#cfccc6"
+          hoveredPillTextColor="#ffffff"
+          pillTextColor="#000000"
+        />
+      </div>
+    );
+  }
+
   return (
     <BrowserRouter>
       <div>
-        <div className="z-100 flex bg-gray-400 h-[3rem] w-full fixed justify-start items-center gap-10 pl-5 rounded-b-sm shadow-lg text-white font-medium top-0 right-0 left-0">
-          <a href="/">
-            {" "}
-            <button className="rounded-3x1 p-1 cursor-pointer">Home</button>
-          </a>
-        </div>
+        <div className="min-w-screen flex items-center justify-center"></div>
+        <NavbarDisplay />
         <div className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />

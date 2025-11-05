@@ -32,7 +32,7 @@ function Home() {
         </div>
 
         <div className="flex flex-col items-center text-white absolute bottom-5 motion-preset-blink motion-duration-5000 ">
-          <div>Scroll to view more</div>
+          <div>Scroll to navigate</div>
           <div>↓</div>
         </div>
       </div>
