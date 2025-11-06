@@ -1,4 +1,4 @@
-import Cloud from "../assets/cloud.svg?react";
+import Cloud from "../assets/cloud.svg";
 import { useState, useEffect } from "react";
 
 interface Props {
@@ -18,13 +18,14 @@ const Clouds = ({ className = "" }: Props) => {
 
   return (
     <div>
-      <Cloud
+      <img
+        src={Cloud}
         className={`${
           isVisible
             ? `${className} motion-preset-fade absolute fill-gray-300 z-10 h-20 lg:h-40`
             : "opacity-0"
         }`}
-      ></Cloud>
+      ></img>
     </div>
   );
 };

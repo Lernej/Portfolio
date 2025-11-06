@@ -6,9 +6,10 @@ import svgrPlugin from 'vite-plugin-svgr';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),
+  plugins: [
+    svgrPlugin({ include: "**/*.svg?react" }),
+    react(),
     tailwindcss(),
-    svgrPlugin(),
   ],
   resolve: {
     alias: {
