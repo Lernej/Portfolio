@@ -48,7 +48,7 @@ function Home() {
 
         <div className="instructions mt-[20%] flex flex-col justify-center items-center gap-3 z-50">
           <p className="text-white font-bold text-2xl">
-            🚀 Selected page for navigation 🚀
+            🚀 Click the arrows to set the page for navigation 🚀
           </p>
           <div>{focusElements[focusElement]}</div>
         </div>

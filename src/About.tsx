@@ -33,7 +33,7 @@ const About = () => {
               </div>
               <div>
                 <p className="text-5xl  font-bold">Hi, I'm Noah!</p>
-                <p className="text-left text-md">
+                <p className="text-left text-md xl:text-lg">
                   I'm a first year computer science student at the University of
                   Central Florida Burnett Honors College. I'm interested in
                   pursuing a career in Software Engineering, Artificial
@@ -44,7 +44,7 @@ const About = () => {
                 <p className="text-3xl  font-bold">
                   Why did I choose to study Computer Science?
                 </p>
-                <p className="text-left text-md">
+                <p className="text-left text-md xl:text-lg">
                   Inspired by my love of video games, I’ve always been
                   fascinated by how software works. In high school, taking AP
                   Computer Science Principles and AP Computer Science A gave me
@@ -57,7 +57,7 @@ const About = () => {
                 <p className="text-3xl font-bold">
                   Some of my other interests!
                 </p>
-                <p className="text-left text-md">
+                <p className="text-left text-md xl:text-lg">
                   Outside of computer science, I love playing Magic: The
                   Gathering, distance running, working out, and playing video
                   games!

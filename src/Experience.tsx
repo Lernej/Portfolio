@@ -52,9 +52,7 @@ const Experience = () => {
                   <ul className="list-disc list-inside text-xl relative lg:text-sm">
                     <li>AP Computer Science Principles</li>
                     <li>AP Computer Science A</li>
-                    <li>Calculus 1</li>
-                    <li>Calculus 2</li>
-                    <li>Calculus 3</li>
+                    <li>Calculus 1, 2, and 3</li>
                     <li>Intro to Programming with C</li>
                     <div className="opacity-0 md:opacity-100 absolute z-20 h-20 w-20 right-15 top-[25%] lg:left-150">
                       <PopInDiv duration={200} direction="right">
@@ -75,7 +73,7 @@ const Experience = () => {
                   </div>
                   <div className="list-disc list-inside flex flex-col pt-2">
                     <div className="">
-                      <div className="text-3xl font-semibold">KnightHacks</div>
+                      <div className="text-2xl font-semibold">KnightHacks</div>
                       <div className="pl-5 flex flex-col gap-1 lg:text-sm">
                         <li>
                           KnightHacks is a student run software engineering club
@@ -95,7 +93,7 @@ const Experience = () => {
                           KnightHacks, where I worked on my first group project.
                         </li>
                       </div>
-                      <div className="text-3xl font-semibold">Hack@UCF</div>
+                      <div className="text-2xl font-semibold">Hack@UCF</div>
                       <div className="pl-5 lg:text-sm">
                         <li>
                           A student-run Cybersecurity Club at UCF! In this club,
