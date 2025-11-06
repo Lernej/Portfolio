@@ -61,11 +61,15 @@ const Skills = () => {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center relative overflow-clip">
       <div className="h-150 absolute -left-75">
-        <img src={sun} className="h-full"></img>
+        <img src={sun} className="h-full" draggable="false"></img>
       </div>
 
       <div className="absolute left-2/3 top-1/3 h-30 motion-preset-oscillate motion-duration-5000 z-15">
-        <img className="h-full rotate-30" src={satellite}></img>
+        <img
+          className="h-full rotate-30"
+          src={satellite}
+          draggable="false"
+        ></img>
       </div>
 
       <div

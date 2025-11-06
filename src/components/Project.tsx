@@ -15,7 +15,7 @@ const Project = ({ title, description, image, imageLink }: Props) => {
       </div>
       <div className="bg-gray-800 flex-3  flex flex-col justify-center">
         <a href={imageLink} target="_blank" className="cursor-pointer">
-          <img className="h-full" src={image}></img>
+          <img className="h-full" src={image} draggable="false"></img>
         </a>
       </div>
       <div className="bg-gray-800 font-thin flex-2 rounded-b-xl text-sm text-left flex flex-col justify-center pl-5 pr-5">

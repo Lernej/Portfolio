@@ -28,10 +28,10 @@ const Experience = () => {
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
-      className="min-h-screen min-w-screen flex justify-center items-center relative"
+      className="min-h-screen min-w-screen flex justify-center items-center relative pt-10"
     >
       <div className=" text-white flex flex-col gap-20 lg:gap-0 lg:flex-row">
-        <div className="flex-2 bg-gray-900/70 p-5 rounded-xl 2xl mx-10">
+        <div className="flex-2 bg-gray-900/70 p-5 rounded-xl 2xl mx-10 flex items-center justify-center">
           <PopInDiv duration={200} direction="right">
             <p className="text-5xl font-bold mb-2 text-center lg:text-5xl">
               My Experience
@@ -62,6 +62,7 @@ const Experience = () => {
                             isSpinning && "spin-once"
                           }`}
                           onClick={handleClick}
+                          draggable="false"
                         ></img>
                       </PopInDiv>
                     </div>
@@ -77,12 +78,12 @@ const Experience = () => {
                       <div className="pl-5 flex flex-col gap-1 lg:text-sm">
                         <li>
                           KnightHacks is a student run software engineering club
-                          at UCF. In the fall semester, I joined the club's
-                          Kickstart Program, in which I was paired with a mentor
-                          and 4 other club members. Through a series of weekly
-                          meetings and events, we worked on projects and
-                          improved our technical skills, learning how to use
-                          tools like React, Tailwind, and Neetcode.
+                          at UCF. In the fall semester of my freshman year, I
+                          joined the club's Kickstart Program, in which I was
+                          paired with a mentor and 4 other club members. Through
+                          a series of weekly meetings and events, we worked on
+                          projects and improved our technical skills, learning
+                          how to use tools like React, Tailwind, and Neetcode.
                         </li>
                         <li>
                           Through Knighthacks, I also had the opportunity to
