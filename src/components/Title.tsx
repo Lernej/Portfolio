@@ -15,7 +15,7 @@ const Title = () => {
     <div
       className={`${
         isVisible
-          ? "mt-20 text-center max-w-full select-none motion-preset-slide-right motion-duration-1000 opacity-100 z-30 md:text-left md:ml-10 lg:w-180"
+          ? "mt-20 text-center max-w-full select-none lg:motion-preset-slide-right motion-duration-1000 opacity-100 transition-opacity duration-500 z-30 md:text-left md:ml-10 lg:w-180"
           : "opacity-0"
       }`}
     >

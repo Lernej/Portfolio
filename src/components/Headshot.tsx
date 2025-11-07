@@ -16,14 +16,14 @@ const Headshot = () => {
     <div
       className={`${
         isVisible
-          ? "flex cursor-pointer opacity-100 motion-preset-slide-left motion-duration-1000 flex-shrink-0 md:mr-20"
-          : "opacity-0"
+          ? "flex cursor-pointer opacity-100 flex-shrink-0 lg:motion-preset-slide-left lg:motion-duration-1000 transition-opacity duration-500 md:mr-20"
+          : "opacity-0 mx-auto"
       }`}
     >
       <img
         draggable="false"
         src={img}
-        className="flex-shrink-0 overflow-x-hidden h-80 max-w-full hover:shadow-[0_0_20px_rgba(255,255,255,1)] transition duration-1000 hover:scale-110 rounded-full border-4 border-gray-600 md:h-100"
+        className="overflow-x-hidden flex-shrink-0 h-80 max-w-full hover:shadow-[0_0_20px_rgba(255,255,255,1)] transition duration-1000  hover:scale-110 rounded-full border-4 border-gray-600 md:h-100 mx-auto"
       ></img>
     </div>
   );

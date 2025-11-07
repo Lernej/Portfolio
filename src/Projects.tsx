@@ -74,6 +74,8 @@ const Projects = () => {
     });
   }, []);
 
+  const dimensions = "h-100 w-80 md:h-120 md:w-100 lg:h-130 lg:w-110";
+
   return (
     <div className="min-h-screen relative overflow-clip pt-20 text-center flex items-center justify-center bg-black text-white">
       <div className="h-full">{stars}</div>
@@ -85,14 +87,8 @@ const Projects = () => {
         <PopInDiv direction="right" duration={500}>
           <div className="flex flex-col items-center gap-10 text-5xl font-bold">
             My Projects
-            <div className="flex items-center gap-5">
-              <div
-                onClick={handleLeftArrow}
-                className="bg-gray-500 hover:bg-gray-600 active:bg-gray-700 active:duration-100 transition-colors duration-500 pt-1 pb-3 p-2 flex items-center justify-center rounded-4xl cursor-pointer"
-              >
-                {"⇦"}
-              </div>
-              <div className="flex h-130 w-110 overflow-hidden relative">
+            <div className="flex flex-col items-center gap-5">
+              <div className={`flex ${dimensions} overflow-hidden relative`}>
                 {projectList.map((project, i) => (
                   <div
                     key={i}
@@ -103,11 +99,20 @@ const Projects = () => {
                   </div>
                 ))}
               </div>
-              <div
-                onClick={handleRightArrow}
-                className="bg-gray-500 hover:bg-gray-600 active:bg-gray-700 active:duration-100 transition-colors duration-500 pt-1 pb-3 p-2 flex items-center justify-center rounded-4xl cursor-pointer"
-              >
-                {"⇨"}
+
+              <div className="flex gap-30">
+                <div
+                  onClick={handleLeftArrow}
+                  className="bg-gray-500 hover:bg-gray-600 active:bg-gray-700 active:duration-100 transition-colors duration-500 pt-1 pb-3 p-2 flex items-center justify-center rounded-4xl cursor-pointer"
+                >
+                  {"⇦"}
+                </div>{" "}
+                <div
+                  onClick={handleRightArrow}
+                  className="bg-gray-500 hover:bg-gray-600 active:bg-gray-700 active:duration-100 transition-colors duration-500 pt-1 pb-3 p-2 flex items-center justify-center rounded-4xl cursor-pointer"
+                >
+                  {"⇨"}
+                </div>
               </div>
             </div>
           </div>

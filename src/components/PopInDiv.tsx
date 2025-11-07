@@ -33,7 +33,7 @@ const PopInDiv = ({ children, className, duration, direction }: Props) => {
       <motion.div
         className={`${className} ${
           isVisible
-            ? `motion-preset-slide-${direction} motion-duration-${duration}`
+            ? `lg:motion-preset-slide-${direction} lg:motion-duration-${duration}`
             : ""
         }`}
         variants={{

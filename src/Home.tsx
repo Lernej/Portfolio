@@ -21,7 +21,7 @@ function Home() {
 
   return (
     <>
-      <div className="relative flex min-h-screen items-center justify-center">
+      <div className="relative flex-col flex min-h-screen items-center justify-center">
         <Clouds className="absolute top-[5%] left-[2%] md:h-30"></Clouds>
         <Clouds className="absolute bottom-[5%] right-[2%] md:h-30"></Clouds>
 
@@ -47,7 +47,7 @@ function Home() {
         </div>
 
         <div className="instructions mt-[20%] flex flex-col justify-center items-center gap-3 z-50">
-          <p className="text-white font-bold text-2xl">
+          <p className="text-white font-bold text-2xl text-center">
             🚀 Click the arrows to set the page for navigation 🚀
           </p>
           <div>{focusElements[focusElement]}</div>
