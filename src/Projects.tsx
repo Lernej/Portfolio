@@ -85,7 +85,7 @@ const Projects = () => {
           <img draggable="false" src={planet}></img>
         </div>
         <PopInDiv direction="right" duration={500}>
-          <div className="flex flex-col items-center gap-10 text-5xl font-bold">
+          <div className="flex flex-col items-center gap-5 text-5xl font-bold oveflow-clip">
             My Projects
             <div className="flex flex-col items-center gap-5">
               <div className={`flex ${dimensions} overflow-hidden relative`}>
