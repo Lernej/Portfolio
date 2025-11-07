@@ -11,6 +11,7 @@ import { StarsBackground } from "./components/animate-ui/components/backgrounds/
 
 function Home() {
   const [focusElement, setFocusElement] = useState(0);
+  const [showAttributions, setShowAttributions] = useState(false);
 
   const focusElements = [
     <Button href="/about">About Me</Button>,
@@ -31,7 +32,7 @@ function Home() {
           <Headshot></Headshot>
         </div>
 
-        <div className="flex flex-col items-center text-white absolute bottom-5 motion-preset-blink motion-duration-5000 ">
+        <div className="flex flex-col items-center text-white absolute bottom-0 motion-preset-blink motion-duration-5000 ">
           <div>Scroll to navigate</div>
           <div>↓</div>
         </div>
@@ -61,21 +62,77 @@ function Home() {
             className="absolute h-35 top-[41%] left-[41%] -translate-x-1/2 -translate-y-1/2"
           />
         </div>
-        <div className="h-8 text-white absolute bottom-0 left-0 right-0 opacity-50 bg-gray-800 z-50 flex text-[10px]">
-          <p className="mt-[5px] z-50">
-            Modified from{" "}
-            <a
-              href="https://www.figma.com/community/file/1166831539721848736?ref=svgrepo.com"
-              target="_blank"
-            >
-              Solar Icons
-            </a>{" "}
-            in CC Attribution License via{" "}
-            <a href="https://www.svgrepo.com/" target="_blank">
-              SVG Repo
-            </a>
-            .
-          </p>
+        <div className="h-8 text-white absolute overflow-clip bottom-0 left-0 right-0 opacity-50 bg-gray-800 z-50 flex items-center text-[5px] lg:text-[8px]">
+          <div
+            className="flex items-center justify-center ml-2 cursor-pointer"
+            onClick={() => {
+              setShowAttributions((prev) => !prev);
+            }}
+          >
+            {!showAttributions
+              ? "Click to show attributions"
+              : "Click to hide attributions"}
+          </div>
+          {showAttributions && (
+            <div className="flex flex-row">
+              <div className="mt-[5px] ml-2 z-50 flex flex-col">
+                <div>
+                  Modified from{" "}
+                  <a
+                    href="https://www.figma.com/community/file/1166831539721848736?ref=svgrepo.com"
+                    target="_blank"
+                  >
+                    Solar Icons
+                  </a>{" "}
+                  in CC Attribution License via{" "}
+                  <a href="https://www.svgrepo.com/" target="_blank">
+                    SVG Repo
+                  </a>
+                </div>
+                <div>
+                  Vectors and icons by{" "}
+                  <a
+                    href="http://www.kamaluddin.co.id/?ref=svgrepo.com"
+                    target="_blank"
+                  >
+                    Emka
+                  </a>{" "}
+                  in CC Attribution License via{" "}
+                  <a href="https://www.svgrepo.com/" target="_blank">
+                    SVG Repo
+                  </a>
+                </div>
+              </div>
+              <div className="mt-[5px] ml-2 z-50 flex flex-col">
+                <div>
+                  Vectors and icons by{" "}
+                  <a
+                    href="https://www.figma.com/@thinkcly?ref=svgrepo.com"
+                    target="_blank"
+                  >
+                    Konstantin Filatov
+                  </a>{" "}
+                  in CC Attribution License via{" "}
+                  <a href="https://www.svgrepo.com/" target="_blank">
+                    SVG Repo
+                  </a>
+                </div>
+                <div>
+                  Vectors and icons by{" "}
+                  <a
+                    href="https://github.com/joypixels/emojione?ref=svgrepo.com"
+                    target="_blank"
+                  >
+                    Joypixels
+                  </a>{" "}
+                  in MIT License via{" "}
+                  <a href="https://www.svgrepo.com/" target="_blank">
+                    SVG Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>

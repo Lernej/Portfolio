@@ -25,6 +25,9 @@ const Clouds = ({ className = "" }: Props) => {
             ? `${className} motion-preset-fade absolute fill-gray-300 z-10 h-20 lg:h-40`
             : "opacity-0"
         }`}
+        style={{
+          WebkitTouchCallout: "none",
+        }}
       ></img>
     </div>
   );

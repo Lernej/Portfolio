@@ -140,3 +140,7 @@ body {
     user-drag: none;
   }
 }
+
+.img {
+  -webkit-touch-callout: "none";
+}
