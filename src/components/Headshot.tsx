@@ -31,29 +31,31 @@ const Headshot = () => {
         ></img>
       </div>
       <div className="flex text-white items-center justify-center mt-3 gap-10">
-        <div className="h-10 w-10 p-2 bg-gray-200 rounded-full cursor-pointer hover:bg-gray-400 transition-colors duration-300">
-          <a
-            href="https://linkedin.com/in/noah-lerner-59b651384"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={ln} className="h-full"></img>
-          </a>
-        </div>
-        <div className="h-10 w-10 p-2 bg-gray-200 rounded-full cursor-pointer hover:bg-gray-400 transition-colors duration-300">
-          <a
-            href="https://github.com/lernej"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={gh} className="h-full"></img>
-          </a>
-        </div>
-        <div className="h-10 w-10 p-2 bg-gray-200 rounded-full cursor-pointer hover:bg-gray-400 transition-colors duration-300">
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-            <img src={rm} className="h-full"></img>
-          </a>
-        </div>
+        <a
+          href="https://linkedin.com/in/noah-lerner-59b651384"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="h-10 w-10 p-2 bg-gray-200 rounded-full cursor-pointer hover:bg-gray-400 transition-colors duration-300">
+            <img src={ln} className="h-full" />
+          </div>
+        </a>
+
+        <a
+          href="https://github.com/lernej"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="h-10 w-10 p-2 bg-gray-200 rounded-full cursor-pointer hover:bg-gray-400 transition-colors duration-300">
+            <img src={gh} className="h-full" />
+          </div>
+        </a>
+
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <div className="h-10 w-10 p-2 bg-gray-200 rounded-full cursor-pointer hover:bg-gray-400 transition-colors duration-300">
+            <img src={rm} className="h-full" />
+          </div>
+        </a>
       </div>
     </div>
   );
