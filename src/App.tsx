@@ -7,24 +7,20 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import PillNav from "./components/PillNav";
 import logo from "./assets/logo.png";
-import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function App() {
   function NavbarDisplay() {
-    const location = useLocation();
     const [visibleNav, setVisibleNav] = useState(false);
 
     useEffect(() => {
       setVisibleNav(false);
 
-      if (location.pathname != "/") {
-        const timeout = setTimeout(() => {
-          setVisibleNav(true);
-        }, 50);
+      const timeout = setTimeout(() => {
+        setVisibleNav(true);
+      }, 50);
 
-        return () => clearTimeout(timeout);
-      }
+      return () => clearTimeout(timeout);
     }, [location]);
 
     return (
