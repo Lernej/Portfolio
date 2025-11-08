@@ -66,9 +66,10 @@ const ImageSlider = ({ imageList, captionList, captionStyle }: Props) => {
           {images.map((_, buttonIndex) => (
             <div
               key={buttonIndex}
-              className={`h-1 w-1 bg-white/50 rounded-4xl ${
+              className={`h-1 w-1 bg-white/50 rounded-4xl cursor-pointer ${
                 buttonIndex == image && "bg-white/100"
               }`}
+              onClick={() => setImage(buttonIndex)}
             ></div>
           ))}
         </div>
