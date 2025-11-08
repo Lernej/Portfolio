@@ -14,10 +14,10 @@ function Home() {
   const [showAttributions, setShowAttributions] = useState(false);
 
   const focusElements = [
-    <Button href="/about">About Me</Button>,
-    <Button href="/experience">Experience</Button>,
-    <Button href="/projects">Projects</Button>,
-    <Button href="/skills">Skills</Button>,
+    <Button href="/about">Navigate to About Me</Button>,
+    <Button href="/experience">Navigate to Experience</Button>,
+    <Button href="/projects">Navigate to Projects</Button>,
+    <Button href="/skills">Navigate to Skills</Button>,
   ];
 
   return (
