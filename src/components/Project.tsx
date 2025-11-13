@@ -7,7 +7,7 @@ interface Props {
 
 const Project = ({ title, description, image, imageLink }: Props) => {
   return (
-    <div className="grow-0 shrink-0 bg-gray-900 h-100 w-80 md:h-120 md:w-100 lg:h-130 lg:w-110 rounded-3xl text-white flex flex-col gap-5 shadow-2xl">
+    <div className="grow-0 shrink-0 bg-gray-900 h-100 w-80 md:h-120 md:w-100 rounded-3xl text-white flex flex-col gap-5 shadow-2xl">
       <div className="bg-gray-800 flex-1 flex flex-col items-center justify-center rounded-t-xl text-4xl font-medium">
         <div className="bg-gradient-to-r from-gray-400 via-white to-gray-400 bg-clip-text text-transparent p-2">
           {title}

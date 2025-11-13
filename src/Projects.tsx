@@ -74,10 +74,10 @@ const Projects = () => {
     });
   }, []);
 
-  const dimensions = "h-100 w-80 md:h-120 md:w-100 lg:h-130 lg:w-110";
+  const dimensions = "h-100 w-80 md:h-120 md:w-100";
 
   return (
-    <div className="h-screen relative overflow-hidden text-center flex items-center justify-center bg-black text-white">
+    <div className="min-h-screen relative overflow-hidden text-center flex items-center justify-center bg-black text-white">
       <div className="h-full">{stars}</div>
 
       <div className="rounded-full relative">
