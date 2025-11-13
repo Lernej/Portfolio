@@ -74,10 +74,10 @@ const Projects = () => {
     });
   }, []);
 
-  const dimensions = "h-100 w-80 md:h-120 md:w-100 lg:h-130 lg:w-110";
+  const dimensions = "h-100 w-80 md:h-120 md:w-100";
 
   return (
-    <div className="min-h-screen relative overflow-clip pt-20 text-center flex items-center justify-center bg-black text-white">
+    <div className="min-h-screen relative overflow-hidden text-center flex items-center justify-center bg-black text-white">
       <div className="h-full">{stars}</div>
 
       <div className="rounded-full relative">
@@ -85,7 +85,7 @@ const Projects = () => {
           <img draggable="false" src={planet}></img>
         </div>
         <PopInDiv direction="right" duration={500}>
-          <div className="flex flex-col items-center gap-5 text-5xl font-bold oveflow-clip">
+          <div className="flex flex-col items-center gap-5 text-5xl font-bold oveflow-clip  md:mt-10">
             My Projects
             <div className="flex flex-col items-center gap-5">
               <div className={`flex ${dimensions} overflow-hidden relative`}>
