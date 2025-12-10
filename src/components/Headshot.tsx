@@ -27,7 +27,7 @@ const Headshot = () => {
         <img
           draggable="false"
           src={img}
-          className="overflow-x-hidden flex-shrink-0 h-80 max-w-full hover:shadow-[0_0_20px_rgba(255,255,255,1)] hover:mb-10 transition-all duration-1000  hover:scale-110 rounded-full border-4 border-gray-600 md:h-100"
+          className="overflow-x-hidden flex-shrink-0 h-80 max-w-full hover:shadow-[0_0_20px_rgba(255,255,255,1)] hover:mb-10 transition-all duration-1000  hover:scale-110 rounded-full border-4 border-gray-600 md:h-100 2xl:h-130"
         ></img>
       </div>
       <div className="flex text-white items-center justify-center mt-3 gap-10">

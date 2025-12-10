@@ -26,7 +26,7 @@ function Home() {
         <Clouds className="absolute top-[5%] left-[2%] md:h-30"></Clouds>
         <Clouds className="absolute bottom-[5%] right-[2%] md:h-30"></Clouds>
 
-        <div className="flex flex-col items-center justify-center gap-10 md:flex-row">
+        <div className="flex flex-col items-center justify-center gap-10 md:flex-row 2xl:gap-40">
           <Title></Title>
 
           <Headshot></Headshot>

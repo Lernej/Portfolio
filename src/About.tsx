@@ -37,8 +37,10 @@ const About = () => {
                 ></img>
               </div>
               <div>
-                <p className="text-5xl  font-bold">Hi, I'm Noah!</p>
-                <p className="text-left text-md xl:text-lg">
+                <p className="text-5xl  font-bold 2xl:text-7xl">
+                  Hi, I'm Noah!
+                </p>
+                <p className="text-left text-md xl:text-lg 2xl:text-3xl">
                   I'm a first year computer science student at the University of
                   Central Florida Burnett Honors College. I'm interested in
                   pursuing a career in Software Engineering, Artificial
@@ -46,10 +48,10 @@ const About = () => {
                 </p>
               </div>
               <div>
-                <p className="text-3xl  font-bold">
+                <p className="text-3xl  font-bold 2xl:text-5xl">
                   Why did I choose to study Computer Science?
                 </p>
-                <p className="text-left text-md xl:text-lg">
+                <p className="text-left text-md xl:text-lg 2xl:text-3xl">
                   Inspired by my love of computer applications and games, I’ve
                   always been fascinated by how software works. In high school,
                   taking AP Computer Science Principles and AP Computer Science
@@ -59,10 +61,10 @@ const About = () => {
                 </p>
               </div>
               <div>
-                <p className="text-3xl font-bold">
+                <p className="text-3xl font-bold 2xl:text-5xl">
                   Some of my other interests!
                 </p>
-                <p className="text-left text-md xl:text-lg">
+                <p className="text-left text-md xl:text-lg 2xl:text-3xl">
                   Outside of computer science, I love playing Magic: The
                   Gathering, distance running, working out, and playing video
                   games!
@@ -78,7 +80,7 @@ const About = () => {
             <ImageSlider
               imageList={imageList}
               captionList={captionList}
-              captionStyle="bg-gray-900/80 flex items-center justify-center p-2 h-15 rounded-2xl"
+              captionStyle="bg-gray-900/80 flex items-center justify-center p-2 h-15 rounded-2xl 2xl:text-xl"
             />
           </div>
         </PopInDiv>

@@ -15,12 +15,14 @@ const Title = () => {
     <div
       className={`${
         isVisible
-          ? "mt-20 text-center max-w-full select-none lg:motion-preset-slide-right motion-duration-1000 opacity-100 transition-opacity duration-500 z-30 md:text-left md:ml-10 lg:w-180"
+          ? "mt-20 text-center max-w-full select-none lg:motion-preset-slide-right motion-duration-1000 opacity-100 transition-opacity duration-500 z-30 md:text-left md:ml-10 lg:w-180 2xl:w-220"
           : "opacity-0"
       }`}
     >
-      <h1 className="text-white font-bold text-3xl lg:text-6xl">Noah Lerner</h1>
-      <h1 className="text-white font-bold text-2xl lg:text-4xl">
+      <h1 className="text-white font-bold text-3xl lg:text-6xl 2xl:text-8xl">
+        Noah Lerner
+      </h1>
+      <h1 className="text-white font-bold text-2xl lg:text-4xl 2xl:text-5xl">
         CS Major at the University of Central Florida Burnett Honors College
       </h1>
     </div>

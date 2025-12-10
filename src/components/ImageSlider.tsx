@@ -36,7 +36,7 @@ const ImageSlider = ({ imageList, captionList, captionStyle }: Props) => {
   return (
     <div className="flex flex-col items-center justify-center gap-2">
       <div
-        className={`bg-cover bg-center h-130 w-90 relative rounded-xl overflow-hidden`}
+        className={`bg-cover bg-center h-130 w-90 relative rounded-xl overflow-hidden 2xl:h-180 2xl:w-120`}
       >
         <div
           onClick={handleRightArrow}
