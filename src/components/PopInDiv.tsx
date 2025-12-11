@@ -31,6 +31,7 @@ const PopInDiv = ({ children, className, duration, direction }: Props) => {
   return (
     <div ref={ref}>
       <motion.div
+        style={{ position: "relative", zIndex: 9999 }}
         className={`${className} ${
           isVisible
             ? `lg:motion-preset-slide-${direction} lg:motion-duration-${duration}`
