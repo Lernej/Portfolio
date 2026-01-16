@@ -22,11 +22,11 @@ const About = () => {
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
-      className="min-h-screen flex items-center justify-center pt-10 relative overflow-clip"
+      className="min-h-screen flex items-center justify-center pt-10 relative overflow-clip z-0"
     >
       <Rocket className="left-5 -bottom-20 opacity-0 lg:opacity-100" />
       <div className="text-image h-full text-white flex flex-col items-center  lg:flex-row justify-center">
-        <div className="lg:pl-30 lg:pr-30">
+        <div className="lg:pl-10 lg:pr-10 2xl:pl-30 2xl:pr-30">
           <PopInDiv duration={200} direction="right">
             <div className="h-full bg-gray-900/80 p-10 rounded-xl flex flex-col text-center items-center justify-center gap-10 flex-1 relative">
               <div className="size-25 absolute right-0 -top-10 motion-preset-wobble motion-duration-5000">
@@ -37,10 +37,10 @@ const About = () => {
                 ></img>
               </div>
               <div>
-                <p className="text-5xl  font-bold 2xl:text-7xl">
+                <p className="text-5xl  font-bold 2xl:text-6xl">
                   Hi, I'm Noah!
                 </p>
-                <p className="text-left text-md xl:text-lg 2xl:text-3xl">
+                <p className="text-left text-md xl:text-lg 2xl:text-2xl">
                   I'm a first year computer science student at the University of
                   Central Florida Burnett Honors College. I'm interested in
                   pursuing a career in Software Engineering, Artificial
@@ -51,7 +51,7 @@ const About = () => {
                 <p className="text-3xl  font-bold 2xl:text-5xl">
                   Why did I choose to study Computer Science?
                 </p>
-                <p className="text-left text-md xl:text-lg 2xl:text-3xl">
+                <p className="text-left text-md xl:text-lg 2xl:text-2xl">
                   Inspired by my love of computer applications and games, I’ve
                   always been fascinated by how software works. In high school,
                   taking AP Computer Science Principles and AP Computer Science
@@ -64,7 +64,7 @@ const About = () => {
                 <p className="text-3xl font-bold 2xl:text-5xl">
                   Some of my other interests!
                 </p>
-                <p className="text-left text-md xl:text-lg 2xl:text-3xl">
+                <p className="text-left text-md xl:text-lg 2xl:text-2xl">
                   Outside of computer science, I love playing Magic: The
                   Gathering, distance running, working out, and playing video
                   games!

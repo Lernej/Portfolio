@@ -14,15 +14,11 @@ const Skills = () => {
   const planets = [planet, planet2, planet3];
   const planetHeights = [150, 130, 250];
 
-  const skills = [
-    "Tools & Technologies",
-    "Frameworks & Libraries",
-    "Languages",
-  ];
+  const skills = ["Tools & Platforms", "Frameworks & Libraries", "Languages"];
   const descriptions = [
-    "Vite, VS Code, Jupyter Notebook, Git, GitHub, Netlify, Google ADK, Gemini API, Firebase",
-    "React, TailwindCSS, Framer Motion, React Router",
-    "Java, C, Python, HTML, CSS, JavaScript, TypeScript",
+    "Node.js, PostgreSQL, Firebase, Supabase, Git, GitHub, Netlify, VS Code, REST APIs",
+    "React, Unity, Express.js, Prisma, TailwindCSS, React Router, Framer Motion",
+    "Java, C, Python, HTML, CSS, JavaScript, TypeScript, C#",
   ];
   const heights = [20, 40, 60];
 
