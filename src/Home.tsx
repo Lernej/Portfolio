@@ -39,11 +39,11 @@ function Home() {
       </div>
 
       <div className="h-full w-full relative flex flex-col items-center gap-20">
-        <div className="absolute inset-0 z-20">
+        <div className="absolute inset-0 z-20 pointer-events-none">
           <Waves></Waves>
         </div>
 
-        <div className="absolute top-0 bottom-0 left-0 right-0">
+        <div className="absolute top-0 bottom-0 left-0 right-0 pointer-events-none">
           <StarsBackground />
         </div>
 
