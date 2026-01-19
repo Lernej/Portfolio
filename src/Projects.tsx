@@ -3,6 +3,7 @@ import slAIde from "./assets/slAIde.png";
 import studyfinder from "./assets/studyfinder.png";
 import statforge from "./assets/statforge.png";
 import planet from "./assets/orbit.svg";
+import runhero from "./assets/RunHero.png";
 import { useState, useMemo } from "react";
 import "./App.css";
 import PopInDiv from "./components/PopInDiv";
@@ -27,6 +28,15 @@ const Projects = () => {
   };
 
   const projectList = [
+    <Project
+      title="RunHero"
+      image={runhero}
+      description={`Run Hero is a full-stack fitness game meant to inspire users to run! By logging in with Strava OAuth,
+        players can gain in-game XP through their Strava-tracked runs, which they can use to improve their stats. The game uses
+        Unity and C# as well as Node.js, Prisma, Express, Typescript, and a PostgreSQL database for the backend. Click the image
+        to check it out on Github!`}
+      imageLink="https://github.com/Lernej/RunHero"
+    />,
     <Project
       title="slAIde"
       image={slAIde}
