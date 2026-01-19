@@ -30,7 +30,7 @@ const Experience = () => {
       }}
       className="min-h-screen min-w-screen flex justify-center items-center relative pt-10"
     >
-      <div className=" text-white flex flex-col gap-20 lg:gap-0 lg:flex-row">
+      <div className=" text-white flex flex-col gap-20 lg:gap-0 lg:flex-row relative z-10">
         <div className="flex-2 bg-gray-900/70 p-3 lg:p-5 rounded-xl 2xl lg:mx-10 flex items-center justify-center">
           <PopInDiv duration={200} direction="right">
             <p className="text-5xl font-bold mb-2 text-center lg:text-5xl 2xl:text-7xl">

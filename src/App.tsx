@@ -7,27 +7,12 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import PillNav from "./components/PillNav";
 import logo from "./assets/logo.png";
-import { useEffect, useState } from "react";
 
 function App() {
   function NavbarDisplay() {
-    const [visibleNav, setVisibleNav] = useState(false);
-
-    useEffect(() => {
-      setVisibleNav(false);
-
-      const timeout = setTimeout(() => {
-        setVisibleNav(true);
-      }, 50);
-
-      return () => clearTimeout(timeout);
-    }, [location]);
-
     return (
       <div
-        className={`min-w-screen flex items-center justify-center opacity-0 transition-opacity duration-100 ${
-          visibleNav && "opacity-100"
-        }`}
+        className={`min-w-screen flex items-center justify-center opacity-100 transition-opacity duration-100 relative z-50`}
       >
         <PillNav
           logo={logo}

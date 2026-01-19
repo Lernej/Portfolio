@@ -77,7 +77,7 @@ const Projects = () => {
   const dimensions = "h-100 w-80 md:h-120 md:w-100 2xl:h-200 2xl:w-180";
 
   return (
-    <div className="min-h-screen relative overflow-hidden text-center flex items-center justify-center bg-black text-white">
+    <div className="min-h-screen relative z-10 overflow-hidden text-center flex items-center justify-center bg-black text-white">
       <div className="h-full">{stars}</div>
 
       <div className="rounded-full relative">
